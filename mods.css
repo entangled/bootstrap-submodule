@@ -7,6 +7,10 @@ body {
         min-height: 100vh;
 }
 
+main {
+        background: #eee;
+}
+
 h1 {
         margin: 1em 0 0.5em -1em;
         padding-left: 0.5em;
@@ -29,13 +33,30 @@ nav li a:hover {
         color: white;
 }
 
+.annotated-code p {
+        margin-bottom: 2pt;
+        font-family: "Cantarell", sans-serif;
+        font-size: smaller;
+}
+
+div.sourceCode {
+        padding: 0;
+        border-radius: 5pt;
+        margin: 0.2em 2em 1em 2em;
+        box-shadow: 1px 1px 3px 0px #ccc;
+}
+
 pre.sourceCode {
-        background: #eee;
-        margin-left: 2em;
-        margin-right: 2em;
+        /* background: #eee; */
+        color: inherit;
+        margin: 0;
         border-left: thick solid #888;
         padding: 10pt 10pt 10pt 20pt;
         font-size: 1rem;
+}
+
+.doctestResult pre.sourceCode {
+        border-color: #484;
 }
 
 footer {
