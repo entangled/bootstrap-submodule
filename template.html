@@ -57,7 +57,8 @@ $if(toc)$
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a href="#" class="ml-5 mr-auto navbar-brand">$title$<br><span style="font-size: smaller">$subtitle$ by <i>$author$</i></span></a>
+  <a href="#" class="ml-5 mr-auto navbar-brand">$title$<br><span style="font-size: smaller">$subtitle$ 
+        $if(author)$by <i>$author$</i>$endif$</span></a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 $table-of-contents$
 </div>
