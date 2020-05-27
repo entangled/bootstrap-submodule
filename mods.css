@@ -133,3 +133,21 @@ code {
         margin-bottom: 3pt;
 }
 
+figure {
+        margin: 0.2em 2em 1em 2em;
+        border-left: thick solid #568;
+        max-width: 100%;
+        box-shadow: 1px 1px 3px 0px #ccc;
+        border-radius: 5pt;
+        padding-bottom: 5pt;
+}
+
+figure img {
+        max-width: 100%;
+        border-radius: 0 5pt 0 0;
+}
+
+figcaption {
+        font-style: italic;
+        margin: 5pt 5pt 5pt 5pt;
+}
