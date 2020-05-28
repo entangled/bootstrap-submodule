@@ -75,6 +75,28 @@ pre.sourceCode {
         border-top: thin solid #ccc;
 }
 
+.doctest[data-status='FAIL'] .doctestResult div.sourceCode {
+        border-radius: 0 0 0 0;
+}
+
+.doctest[data-status='FAIL'] .doctestResult pre.sourceCode {
+        border-color: #933;
+}
+
+.doctest .doctestExpect div.sourceCode {
+        border-radius: 0 0 5pt 5pt;
+        margin-top: 0;
+        border-top: thin solid #ccc;
+}
+
+.doctest .doctestExpect pre.sourceCode:before {
+        content: "Expected: ";
+}
+
+.doctestExpect pre.sourceCode {
+        border-color: #888;
+}
+
 footer {
         background: #eee;
         padding: 0.5em 0 0.5em 0;
