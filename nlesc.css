@@ -12,7 +12,6 @@ main {
 }
 
 h1 {
-        margin: 1em 0 0.5em -1em;
         padding-left: 0.5em;
         border-bottom: thin solid black;
 }
@@ -26,12 +25,32 @@ strong {
         font-weight: 500;
 }
 
-nav li a:hover {
-        color: white;
+nav {
+    background: #00aeef;
+    color: black;
+} 
+
+footer {
+    background: #00aeef;
+    color: black;
 }
 
-.navbar-toggler {
-        color: black;
+footer a {
+    font-weight: 400;
+    color: black;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: white;
+}
+
+nav a {
+    color: black;
+}
+
+nav li a:hover {
+        color: white;
 }
 
 .annotated-code p {
@@ -94,7 +113,6 @@ pre.sourceCode {
 }
 
 footer {
-        background: #eee;
         padding: 0.5em 0 0.5em 0;
 }
 
@@ -169,3 +187,13 @@ figcaption {
         font-style: italic;
         margin: 5pt 5pt 5pt 5pt;
 }
+
+
+@media only screen and (min-width: 768px) {
+        h1 {
+                margin: 1em 0 0.5em -1em;
+                padding-left: 0.5em;
+                border-bottom: thin solid black;
+        }
+}
+

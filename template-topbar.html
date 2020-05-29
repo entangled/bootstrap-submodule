@@ -53,38 +53,35 @@ $include-before$
 $endfor$
 
 $if(toc)$
-<nav id="$idprefix$TOC" class="navbar">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a href="#" class="ml-5 mr-auto navbar-brand">$title$<br><span style="font-size: smaller">$subtitle$ 
-        $if(author)$by <i>$author$</i>$endif$</span></a>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<nav id="$idprefix$TOC" class="navbar navbar-light">
+<a href="#" class="navbar-brand">$title$</a>
+<div class="navbar-nav mr-auto w-50">
 $table-of-contents$
 </div>
+$if(github)$
+<span id="logobar">
+<a href="$github$"><img src="img/github.png" alt="Octocat" style="height: 20pt"/> Find us on Github</a>
+<a href="$github$releases"><img src="img/download.svg" alt="Download" style="height: 20pt"/> Download Entangled</a>
+</span>
+$endif$
 </nav>
 $endif$
 
-<!-- $if(title)$
-<nav class="navbar navbar-dark navbar-expand-md bg-dark mb-4">
-$if(subtitle)$
-<p class="subtitle">$subtitle$</p>
-$endif$
-$for(author)$
-<p class="author">$author$</p>
-$endfor$
-$if(date)$
-<p class="date">$date$</p>
-$endif$
-</nav>
-$endif$ -->
+<div id="title-bar">
+<div id="title">
+$title$
+</div>
+<div id="subtitle">
+$subtitle$
+</div>
+</div>
 
 <main role="main" class="flex-fill"><div class="container my-5">
 $body$
 </div></main>
 
 $if(footer)$
-<footer class="py-4 bg-dark text-white-50 footer"><div class="container">
+<footer class="py-4 footer"><div class="container">
 $footer$
 </div></footer>
 $endif$
