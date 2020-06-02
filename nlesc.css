@@ -12,7 +12,6 @@ main {
 }
 
 h1 {
-        margin: 1em 0 0.5em -1em;
         padding-left: 0.5em;
         border-bottom: thin solid black;
 }
@@ -27,8 +26,27 @@ strong {
 }
 
 nav {
-    color: black;
     background: #00aeef;
+    color: black;
+} 
+
+footer {
+    background: #00aeef;
+    color: white;
+}
+
+footer a {
+    font-weight: 400;
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: white;
+}
+
+nav a {
+    color: black;
 }
 
 nav li a:hover {
@@ -95,7 +113,6 @@ pre.sourceCode {
 }
 
 footer {
-        background: #eee;
         padding: 0.5em 0 0.5em 0;
 }
 
@@ -170,3 +187,13 @@ figcaption {
         font-style: italic;
         margin: 5pt 5pt 5pt 5pt;
 }
+
+
+@media only screen and (min-width: 768px) {
+        h1 {
+                margin: 1em 0 0.5em -1em;
+                padding-left: 0.5em;
+                border-bottom: thin solid black;
+        }
+}
+
