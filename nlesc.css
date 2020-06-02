@@ -26,12 +26,13 @@ strong {
         font-weight: 500;
 }
 
-nav li a:hover {
-        color: white;
+nav {
+    color: black;
+    background: #00aeef;
 }
 
-.navbar-toggler {
-        color: black;
+nav li a:hover {
+        color: white;
 }
 
 .annotated-code p {
