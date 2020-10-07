@@ -85,6 +85,7 @@ pre.ansi2html-content {
 
 .doctest[data-status='FAIL'] .doctestResult div.sourceCode {
         border-radius: 0 0 0 0;
+        margin-bottom: 0;
 }
 
 .doctest[data-status='FAIL'] .doctestResult pre.sourceCode {

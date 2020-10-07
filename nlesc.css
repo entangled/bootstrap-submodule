@@ -32,12 +32,12 @@ nav {
 
 footer {
     background: #00aeef;
-    color: black;
+    color: white;
 }
 
 footer a {
     font-weight: 400;
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 
