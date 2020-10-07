@@ -73,7 +73,7 @@ div.doctestResult {
         color: inherit;
         margin: 0;
         border-radius: 0 0 5pt 5pt;
-        border-left: thick solid #888;
+        border-left: thick solid #586;
         padding: 10pt 10pt 10pt 20pt;
         font-size: 1rem;
 }
@@ -96,6 +96,10 @@ pre.ansi2html-content {
 
 .doctestResult pre.sourceCode {
         border-color: #484;
+}
+
+.doctestInput pre.sourceCode {
+        border-color: #568;
 }
 
 .doctestInput div.sourceCode {
