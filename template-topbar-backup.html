@@ -63,47 +63,42 @@
   <!--  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
 
+  <nav class="navbar navbar-light col-md-10 ml-sm-auto col-lg-10">
+    <div class="navbar-nav mr-auto w-50">
+      $if(topbar)$
+      <div id="topbar">
+        $for(topbar)$
+        <div class="topbar-item navbar-nav mr-auto w-50">
+          $topbar$
+        </div>
+        $endfor$
+      </div>
+      $endif$
+    </div>
+    $if(github)$
+    <span id="logobar" style="padding-right: 10px;">
+      <a href="$github$"><img src="img/github.png" alt="Octocat" style="height: 18pt" /> Github</a>
+      <a href="$github$releases"><img src="img/download.svg" alt="Download" style="height: 18pt" /> Downloads</a>
+    </span>
+    $endif$
+  </nav>
+
+  <div id="title-bar" class="title-bar col-md-10 ml-sm-auto col-lg-10">
+
+    <div id="title">
+      $title$
+    </div>
+    <div id="subtitle">
+      $subtitle$
+    </div>
+  </div>
 </head>
 
-<body>
+<body >
   $for(include-before)$
   $include-before$
   $endfor$
-
   <div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">Entangled</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-     
-      $for(topbar)$
-      <li class="nav-item">
-        
-        $topbar$
-        
-      </li>
-      $endfor$
-     </ul>
-  </div>
-</nav>
-
-    <div id="title-bar" class="title-bar">
-
-      <div id="title">
-        $title$
-      </div>
-      <div id="subtitle">
-        $subtitle$
-      </div>
-    </div>
     <nav id="$idprefix$TOC" class="col-auto col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
         <a href="#" class="navbar-brand">$title$</a>
