@@ -34,6 +34,11 @@
       width: 50%;
     }
 
+    .nopadding {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
     $if(quotes)$ q {
       quotes: "“" "”" "‘" "’";
     }
@@ -71,51 +76,63 @@
   $endfor$
 
   <div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">Entangled</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div class="row">
+      <div id="sidebar" class="col-lg-2 nopadding d-none d-xl-block">
+        <nav id="$idprefix$TOC" class="navbar-expand-sm col-auto col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <a href="#" class="navbar-brand">$title$</a>
+            <div class="toc">
+              $table-of-contents$
+            </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-     
-      $for(topbar)$
-      <li class="nav-item">
-        
-        $topbar$
-        
-      </li>
-      $endfor$
-     </ul>
-  </div>
-</nav>
-
-    <div id="title-bar" class="title-bar">
-
-      <div id="title">
-        $title$
+          </div>
+        </nav>
       </div>
-      <div id="subtitle">
-        $subtitle$
-      </div>
-    </div>
-    <nav id="$idprefix$TOC" class="col-auto col-md-2 d-none d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
-        <a href="#" class="navbar-brand">$title$</a>
-        <div class="toc">
-          $table-of-contents$
+      <div class="col-xl-10  nopadding d-block">
+        <nav class="navbar navbar-expand-lg navbar-light py-2">
+          <button class="ml-auto navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+              $for(topbar)$
+              <li class="nav-item">
+                $topbar$
+              </li>
+              $endfor$
+              $if(github)$
+
+              <li class="nav-item">
+                <a href="$github$"><img src="img/github.png" alt="Octocat" style="height: 18pt" /> Github</a>
+              </li>
+              <li class="nav-item">
+                <a href="$github$releases"><img src="img/download.svg" alt="Download" style="height: 18pt" />
+                  Downloads</a>
+              </li>
+              $endif$
+            </ul>
+          </div>
+        </nav>
+
+        <div id="title-bar" class="title-bar">
+
+          <div id="title">
+            $title$
+          </div>
+          <div id="subtitle">
+            $subtitle$
+          </div>
         </div>
 
+        <main role="main" class="col-auto col-md-10 ml-sm-auto col-lg-10 px-3 pb-5">
+          $body$
+        </main>
       </div>
-    </nav>
-    <main role="main" class="col-auto col-md-10 ml-sm-auto col-lg-10 px-3 pb-5">
-      $body$
-    </main>
+    </div>
   </div>
 
 
@@ -124,12 +141,13 @@
   $endfor$
 
   $if(footer)$
-  <footer class="py-2 footer fixed-bottom">
-    <div class="container">
+  <footer class="py-2 footer fixed-bottom 1padding">
+    <div class="container-fluid">
       $footer$
     </div>
   </footer>
   $endif$
+  </div>
 
   <!-- Bootstrap 4.5.0 -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -151,6 +169,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
   <script>
     var clipboard = new ClipboardJS('.btn')
+    //const userAgent = navigator.userAgent.toLowerCase();
+    //const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+    //if(isTablet) {
+    //  console.log("here")
+    //  document.getElementById("sidebar").style.display = 'none'
+    //}
   </script>
 
 </body>
